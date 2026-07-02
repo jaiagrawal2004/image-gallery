@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Image Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2>Image Gallery</h2>
+
+        <div class="nav-right">
+            <div class="search-box">
+                <i class="fa fa-search"></i>
+                <input type="text" id="searchInput"
+                       placeholder="Search images...">
+            </div>
+
+            <button id="themeBtn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Heading -->
+    <section class="hero">
+        <h1>Responsive Image Gallery</h1>
+        <p>HTML • CSS • JavaScript • Glassmorphism UI</p>
+    </section>
+
+    <!-- Project Description -->
+<section class="description">
+    <h2>Project Description</h2>
+    <p>
+        This Responsive Image Gallery is developed using HTML, CSS, and JavaScript.
+        It allows users to browse images using category filters, search functionality,
+        dark/light mode, and a lightbox viewer with next and previous navigation.
+        The gallery uses a modern glassmorphism design and masonry layout to provide
+        an attractive and responsive user experience on all devices.
+    </p>
+</section>
+
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="nature">Nature</button>
+        <button class="filter" data-filter="cars">Cars</button>
+        <button class="filter" data-filter="animals">Animals</button>
+        <button class="filter" data-filter="travel">Travel</button>
+        <button class="filter" data-filter="tech">Technology</button>
+        <button class="filter" data-filter="architecture">Architecture</button>
+    </div>
+
+    <!-- Masonry Gallery -->
+    <div class="gallery">
+
+        <!-- Nature -->
+        <div class="card nature" data-name="Mountain Nature">
+            <img src="images/nature1.jpg" alt="">
+            <div class="overlay">
+                <h3>Mountain</h3>
+                <button class="viewBtn">
+                    <i class="fa fa-eye"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card nature" data-name="Forest">
+            <img src="images/nature2.jpg" alt="">
+            <div class="overlay">
+                <h3>Forest</h3>
+                <button class="viewBtn">
+                    <i class="fa fa-eye"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Cars -->
+        <div class="card cars" data-name="Sports Car">
+            <img src="images/car1.jpg" alt="">
+            <div class="overlay">
+                <h3>Sports Car</h3>
+                <button class="viewBtn">
+                    <i class="fa fa-eye"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card cars" data-name="Luxury Car">
+            <img src="images/car2.jpg" alt="">
+            <div class="overlay">
+                <h3>Luxury Car</h3>
+                <button class="viewBtn">
+                    <i class="fa fa-eye"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Animals -->
+        <div class="card animals" data-name="Cheetah">
+            <img src="images/animal1.jpg" alt="">
+            <div class="overlay">
+                <h3>Cheetah</h3>
+                <button class="viewBtn">
+                    <i class="fa fa-eye"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card animals" data-name="Tiger">
+            <img src="images/animal2.jpg" alt="">
+            <div class="overlay">
+                <h3>Tiger</h3>
+                <button class="viewBtn">
+                    <i class="fa fa-eye"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Travel -->
+        <div class="card travel" data-name="Beach">
+            <img src="images/travel1.jpg" alt="">
+            <div class="overlay">
+                <h3>Beach</h3>
+                <button class="viewBtn">
+                    <i class="fa fa-eye"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card travel" data-name="City">
+            <img src="images/travel2.jpg" alt="">
+            <div class="overlay">
+                <h3>City</h3>
+                <button class="viewBtn">
+                    <i class="fa fa-eye"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Technology -->
+        <div class="card tech" data-name="Laptop">
+            <img src="images/laptop.jpg" alt="">
+            <div class="overlay">
+                <h3>Laptop</h3>
+                <button class="viewBtn">
+                    <i class="fa fa-eye"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card tech" data-name="Coding">
+            <img src="images/coding.jpg" alt="">
+            <div class="overlay">
+                <h3>Coding</h3>
+                <button class="viewBtn">
+                    <i class="fa fa-eye"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Architecture -->
+        <div class="card architecture" data-name="Building">
+            <img src="images/building1.jpg" alt="">
+            <div class="overlay">
+                <h3>Building</h3>
+                <button class="viewBtn">
+                    <i class="fa fa-eye"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card architecture" data-name="Apartments">
+            <img src="images/building2.jpg" alt="">
+            <div class="overlay">
+                <h3>Apartments</h3>
+                <button class="viewBtn">
+                    <i class="fa fa-eye"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox">
+
+        <span class="close">
+            <i class="fa fa-times"></i>
+        </span>
+
+        <button class="prev">
+            <i class="fa fa-chevron-left"></i>
+        </button>
+
+        <img id="lightboxImg" src="">
+
+        <button class="next">
+            <i class="fa fa-chevron-right"></i>
+        </button>
+
+        <a id="downloadBtn" download>
+            <button>
+                <i class="fa fa-download"></i>
+                Download
+            </button>
+        </a>
+
+    </div>
+
+    <!-- Footer -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <h2>Image Gallery</h2>
+
+        <p>
+            A fully responsive image gallery developed using
+            HTML, CSS, and JavaScript with modern UI features.
+        </p>
+
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#">Gallery</a>
+            <a href="#">Categories</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+            © 2026 Responsive Image Gallery Project <br>
+            Developed by Jai Agrawal. 
+            All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
